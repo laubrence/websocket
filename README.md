@@ -79,8 +79,8 @@ ws.onmessage = function(evt){console.log(evt.data);ws.close();};
 ws.onclose = function(evt){console.log(“WebSocketClosed!”);};
 ws.onerror = function(evt){console.log(“WebSocketError!”);};
 ```
-  
-    服务器API
+
+  服务器API
 
 ```java
 @ServerEndpoint("/echo")
@@ -123,7 +123,9 @@ Tomcat从7.0.27开始支持 WebSocket，从7.0.47开始支持JSR-356
 ### 应用场景
 
 1. WebIM
-
+  
+  WebQQ
+  
   新浪微博 [私信聊天](http://weibo.com/)
 
 2. 在线聊天室 
