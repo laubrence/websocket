@@ -128,29 +128,29 @@ Sec-WebSocket-Protocol: chat
 
 1. WebIM
   
-  WebQQ
+  - WebQQ
   
-  新浪微博 [私信聊天](http://weibo.com/)
+  - 新浪微博 [私信聊天](http://weibo.com/)
 
 2. 在线聊天室 
 
-  [聊天室demo](http://chat.workerman.net/)
+  - [聊天室demo](http://chat.workerman.net/)
 
 3. 多玩家游戏
 
-  [小蝌蚪游戏](http://kedou.workerman.net/)
+  - [小蝌蚪游戏](http://kedou.workerman.net/)
   
-  [BrowserQuest](http://browserquest.mozilla.org/)
+  - [BrowserQuest](http://browserquest.mozilla.org/)
 
 4. 视频直播弹幕
   
-  [摄像头录制页面](http://www.workerman.net/demos/live-camera/camera.html)
+  - [摄像头录制页面](http://www.workerman.net/demos/live-camera/camera.html)
   
-  [实时接收视频流页面](http://www.workerman.net/demos/live-camera/)
+  - [实时接收视频流页面](http://www.workerman.net/demos/live-camera/)
 
 5. WEB消息推送
   
-  [推送demo](http://www.workerman.net:2123/)
+  - [推送demo](http://www.workerman.net:2123/)
 
 6. 基于位置的应用
 
