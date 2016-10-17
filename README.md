@@ -9,11 +9,14 @@
   采用轮询的方式，客户端发起连接后，如果没消息，就一直不返回Response给客户端。直到有消息才返回，返回完之后，客户端再次建立连接，周而复始。
   ![Alt text](http://img.blog.csdn.net/20130517151612871)
   缺点: 需要有很高的并发处理能力
+---
 
 ## 2. WebSocket 是什么
+
 WebSocket 是 HTML5 一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯。
-+ 基于TCP协议
->握手的时序图
+
+- 基于TCP协议
+握手的时序图
 >![Alt text](https://raw.githubusercontent.com/laubrence/static/master/websocket.gif)
 + 双向通信
 >类似于Socket，服务器和客户端(Browser)都能主动的向对方发送或接收数据
