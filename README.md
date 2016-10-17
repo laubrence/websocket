@@ -21,15 +21,28 @@
 
 WebSocket 是 HTML5 一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯。
 
-- 基于TCP协议
+ - 基于TCP协议
+
 握手的时序图
+
 >![Alt text](https://raw.githubusercontent.com/laubrence/static/master/websocket.gif)
-+ 双向通信
->类似于Socket，服务器和客户端(Browser)都能主动的向对方发送或接收数据
->传统 HTTP 请求响应客户端服务器交互图 
->![Alt text](http://www.ibm.com/developerworks/cn/java/j-lo-WebSocket/img001.jpg "传统 HTTP 请求响应客户端服务器交互图")
->WebSocket 请求响应客户端服务器交互图 
->![Alt text](http://www.ibm.com/developerworks/cn/java/j-lo-WebSocket/img002.jpg "WebSocket 请求响应客户端服务器交互图")
+
+ - 双向通信
+
+类似于Socket，服务器和客户端(Browser)都能主动的向对方发送或接收数据
+
+传统 HTTP 请求响应客户端服务器交互图 
+
+![Alt text](http://www.ibm.com/developerworks/cn/java/j-lo-WebSocket/img001.jpg "传统 HTTP 请求响应客户端服务器交互图")
+
+
+WebSocket 请求响应客户端服务器交互图 
+
+![Alt text](http://www.ibm.com/developerworks/cn/java/j-lo-WebSocket/img002.jpg "WebSocket 请求响应客户端服务器交互图")
+
+---
+
+
 ## 3. WebSocket 机制
 + WebSocket 客户端连接报文
 ```text
