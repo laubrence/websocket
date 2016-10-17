@@ -11,10 +11,10 @@
 > 缺点: 需要有很高的并发处理能力
 ## 2. WebSocket 是什么
 > WebSocket 是 HTML5 一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯。
-+ ### 基于TCP协议
++ 基于TCP协议
 >握手的时序图
 >![Alt text](https://raw.githubusercontent.com/laubrence/static/master/websocket.gif)
-+ ### 双向通信
++ 双向通信
 >类似于Socket，服务器和客户端(Browser)都能主动的向对方发送或接收数据
 >传统 HTTP 请求响应客户端服务器交互图 
 >![Alt text](http://www.ibm.com/developerworks/cn/java/j-lo-WebSocket/img001.jpg "传统 HTTP 请求响应客户端服务器交互图")
@@ -32,7 +32,6 @@ Sec-WebSocket-Protocol: chat, superchat
 Sec-WebSocket-Version: 13
 Origin: http://example.com
 ```
-
 + WebSocket 服务端响应报文
 ```text
 HTTP/1.1 101 Switching Protocols
@@ -42,7 +41,7 @@ Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
 Sec-WebSocket-Protocol: chat
 ```
 + WebSocket API
-> 客户端API
+客户端API
 ```javascript
 var ws = new WebSocket(“ws://echo.websocket.org”);
 ws.onopen = function(){ws.send(“Test!”); };
@@ -50,7 +49,7 @@ ws.onmessage = function(evt){console.log(evt.data);ws.close();};
 ws.onclose = function(evt){console.log(“WebSocketClosed!”);};
 ws.onerror = function(evt){console.log(“WebSocketError!”);};
 ```
-> 服务器API
+服务器API
 ```
 @ServerEndpoint("/echo")
 public class EchoEndpoint {
