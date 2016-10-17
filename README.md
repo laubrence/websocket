@@ -49,29 +49,6 @@ WebSocket 请求响应客户端服务器交互图
 
 ## 3. WebSocket 机制
 
-- WebSocket 客户端连接报文
-
-```plain
-GET /chat HTTP/1.1
-Host: server.example.com
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
-Sec-WebSocket-Protocol: chat, superchat
-Sec-WebSocket-Version: 13
-Origin: http://example.com
-```
-
- - WebSocket 服务端响应报文
-
-```plain
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
-Sec-WebSocket-Protocol: chat
-```
-
  - WebSocket API
  
 客户端API
@@ -113,6 +90,29 @@ public class EchoEndpoint {
 ```
 
 注：Tomcat从7.0.27开始支持 WebSocket，从7.0.47开始支持JSR-356
+
+- WebSocket 客户端连接报文
+
+```plain
+GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
+Sec-WebSocket-Protocol: chat, superchat
+Sec-WebSocket-Version: 13
+Origin: http://example.com
+```
+
+ - WebSocket 服务端响应报文
+
+```plain
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
+Sec-WebSocket-Protocol: chat
+```
 
 ---
 
