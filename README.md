@@ -1,12 +1,11 @@
 #websocket
 
 ## 1. WebSocket 的背景
-+ Polling
++Polling
 > 采用轮询的方式，浏览器隔个几秒就发送一次请求，询问服务器是否有新信息。
-
->![Alt text](http://img.blog.csdn.net/20130517151509160)
+> ![Alt text](http://img.blog.csdn.net/20130517151509160)
 >缺点：需要服务器有很快的处理速度和资源
-+ Long Polling
++Long Polling
 >采用轮询的方式，客户端发起连接后，如果没消息，就一直不返回Response给客户端。直到有消息才返回，返回完之后，客户端再次建立连接，周而复始。
 >
 >![Alt text](http://img.blog.csdn.net/20130517151612871)
