@@ -128,9 +128,9 @@ Sec-WebSocket-Protocol: chat
 
 1. WebIM
   
-- WebQQ
+  - WebQQ
   
-- 新浪微博 [私信聊天](http://weibo.com/)
+  - 新浪微博 [私信聊天](http://weibo.com/)
 
 2. 在线聊天室 
 
