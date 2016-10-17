@@ -41,7 +41,7 @@ Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
 Sec-WebSocket-Protocol: chat
 ```
 + WebSocket API
-客户端API
+> 客户端API
 ```javascript
 var ws = new WebSocket(“ws://echo.websocket.org”);
 ws.onopen = function(){ws.send(“Test!”); };
@@ -49,7 +49,7 @@ ws.onmessage = function(evt){console.log(evt.data);ws.close();};
 ws.onclose = function(evt){console.log(“WebSocketClosed!”);};
 ws.onerror = function(evt){console.log(“WebSocketError!”);};
 ```
-服务器API
+> 服务器API
 ```
 @ServerEndpoint("/echo")
 public class EchoEndpoint {
