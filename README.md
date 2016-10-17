@@ -74,7 +74,7 @@ Sec-WebSocket-Protocol: chat
 
  - WebSocket API
  
-  客户端API
+客户端API
 
 ```javascript
 var ws = new WebSocket(“ws://echo.websocket.org”);
@@ -84,7 +84,7 @@ ws.onclose = function(evt){console.log(“WebSocketClosed!”);};
 ws.onerror = function(evt){console.log(“WebSocketError!”);};
 ```
 
-  服务器API
+服务器API
 
 ```java
 @ServerEndpoint("/echo")
@@ -112,7 +112,7 @@ public class EchoEndpoint {
  }
 ```
 
-Tomcat从7.0.27开始支持 WebSocket，从7.0.47开始支持JSR-356
+注：Tomcat从7.0.27开始支持 WebSocket，从7.0.47开始支持JSR-356
 
 ---
 
