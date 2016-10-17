@@ -7,32 +7,22 @@
 >缺点：需要服务器有很快的处理速度和资源
 + Long Polling
 >采用轮询的方式，客户端发起连接后，如果没消息，就一直不返回Response给客户端。直到有消息才返回，返回完之后，客户端再次建立连接，周而复始。
->
 >![Alt text](http://img.blog.csdn.net/20130517151612871)
 > 缺点: 需要有很高的并发处理能力
 ## 2. WebSocket 是什么
 > WebSocket 是 HTML5 一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯。
 + ### 基于TCP协议
 >握手的时序图
->
 >![Alt text](https://raw.githubusercontent.com/laubrence/static/master/websocket.gif)
->
 + ### 双向通信
 >类似于Socket，服务器和客户端(Browser)都能主动的向对方发送或接收数据
-
 >传统 HTTP 请求响应客户端服务器交互图 
->
 >![Alt text](http://www.ibm.com/developerworks/cn/java/j-lo-WebSocket/img001.jpg "传统 HTTP 请求响应客户端服务器交互图")
-
 >WebSocket 请求响应客户端服务器交互图 
->
 >![Alt text](http://www.ibm.com/developerworks/cn/java/j-lo-WebSocket/img002.jpg "WebSocket 请求响应客户端服务器交互图")
-
-
-
 ## 3. WebSocket 机制
 + WebSocket 客户端连接报文
-```
+```text
 GET /chat HTTP/1.1
 Host: server.example.com
 Upgrade: websocket
@@ -44,25 +34,23 @@ Origin: http://example.com
 ```
 
 + WebSocket 服务端响应报文
-```
+```text
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
 Sec-WebSocket-Protocol: chat
 ```
-
 + WebSocket API
 > 客户端API
-```
+```javascript
 var ws = new WebSocket(“ws://echo.websocket.org”);
 ws.onopen = function(){ws.send(“Test!”); };
 ws.onmessage = function(evt){console.log(evt.data);ws.close();};
 ws.onclose = function(evt){console.log(“WebSocketClosed!”);};
 ws.onerror = function(evt){console.log(“WebSocketError!”);};
 ```
->
->服务器API
+> 服务器API
 ```
 @ServerEndpoint("/echo")
 public class EchoEndpoint {
@@ -89,13 +77,11 @@ public class EchoEndpoint {
  }
 ```
 > Tomcat从7.0.27开始支持 WebSocket，从7.0.47开始支持JSR-356
-
 ## 4. WebSocket 应用场景
 > 决定手头的工作是否需要使用WebSocket技术的方法很简单：
 + 你的应用提供多个用户相互交流吗？
 + 你的应用是展示服务器端经常变动的数据吗？
-
-> 应用场景
+### 应用场景
 1. WebIM
 > 新浪微博 [私信聊天](http://weibo.com/)
 2. 在线聊天室 
